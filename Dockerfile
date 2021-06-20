@@ -10,7 +10,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
 COPY configure.sh /root/
 RUN chmod a+x /root/configure.sh
 
-CMD exec /root/configure.sh
+ENTRYPOINT ["./root/configure.sh"]
 EXPOSE 443
 
 
