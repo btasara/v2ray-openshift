@@ -6,9 +6,11 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && unzip /v2ray.zip -d /v2ray \
  && cd /v2ray \ && chmod a+x v2ray v2ctl \
  && rm -rf /root/v2ray.zip
+ 
 COPY configure.sh /root/configure.sh
 RUN chmod a+x /root/configure.sh
-ENTRYPOINT ["sh", "/root/configure.sh"]
+
+CMD exec /root/configure.sh
 EXPOSE 443
 
 
