@@ -7,7 +7,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && cd /v2ray \ && chmod a+x v2ray v2ctl \
  && rm -rf /root/v2ray.zip
  
-COPY configure.sh /root/configure.sh
+COPY configure.sh /root/
 RUN chmod a+x /root/configure.sh
 
 CMD exec /root/configure.sh
