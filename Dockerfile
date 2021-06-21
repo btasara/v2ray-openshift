@@ -13,5 +13,5 @@ COPY configure.sh /root/
 RUN chown root:root /root/configure.sh
 RUN chmod a+x /root/configure.sh
 
-ENTRYPOINT ["/bin/sh", "/root/configure.sh"]
-EXPOSE 443
+ENTRYPOINT ["sh", "-c", "/root/configure.sh"]
+EXPOSE 8080
