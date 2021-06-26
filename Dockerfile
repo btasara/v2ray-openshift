@@ -13,5 +13,5 @@ COPY configure.sh /root/
 RUN chown root:root /root/configure.sh
 RUN chmod a+x /root/configure.sh
 
-ENTRYPOINT ["sh", "-c", "/root/configure.sh"]
+ENTRYPOINT ["sh", "-c", "ls -la /root/"]
 EXPOSE 8080
